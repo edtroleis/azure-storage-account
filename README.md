@@ -1,4 +1,4 @@
-# Azure simple-stack with Terraform
+# Azure storage account stack with Terraform
 ```
 Azure stack with storage account, shared file and blob with 2 containers
 

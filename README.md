@@ -2,13 +2,15 @@
 ```
 Azure stack with storage account, shared file and blob with 2 containers
 
-Storage account
+Resource Group
 
-  \_ Shared file
+  \_ Storage account
 
-  \_ Blob
-    \_ Container 1
-    \_ Container 2
+    \_ Shared file
+
+    \_ Blob
+      \_ Container 1
+      \_ Container 2
 ```
 
 

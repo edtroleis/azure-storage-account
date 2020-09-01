@@ -13,7 +13,6 @@ Resource Group
       \_ Container 2
 ```
 
-
 ## Install az cli in Windows
 https://docs.microsoft.com/pt-br/cli/azure/install-azure-cli-windows?view=azure-cli-latest&tabs=azure-cli
 
@@ -41,12 +40,18 @@ az login --service-principal -u CLIENT_ID -p CLIENT_SECRET --tenant TENANT_ID
 az logout
 ```
 
-## Configuring the Service Principal in Terraform
+## Create container int storage account to put tfstate files
 ```
-Executed in git bash
-export ARM_CLIENT_ID="clintId"
-export ARM_CLIENT_SECRET="clientSecret"
-export ARM_SUBSCRIPTION_ID="subscriptionId"
+az storage container create -n tfstate --account-name <YourAzureStorageAccountName> --account-key <YourAzureStorageAccountKey>
+```
+
+## Configure the Service Principal in Terraform
+https://www.terraform.io/docs/providers/azurerm/guides/service_principal_client_secret.html
+
+```
+export ARM_CLIENT_ID="service-principal-appid"
+export ARM_CLIENT_SECRET="service-principal-password"
+export ARM_SUBSCRIPTION_ID="id"
 export ARM_TENANT_ID="tenantId"
 ```
 

@@ -40,7 +40,7 @@ az login --service-principal -u CLIENT_ID -p CLIENT_SECRET --tenant TENANT_ID
 az logout
 ```
 
-## Create container int storage account to put tfstate files
+## Create container in storage account to put tfstate files
 ```
 az storage container create -n tfstate --account-name <YourAzureStorageAccountName> --account-key <YourAzureStorageAccountKey>
 ```
